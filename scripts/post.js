@@ -1,16 +1,25 @@
 const token = document.getElementById("token");
-const user = document.getElementById("user");
-const getBtn = document.getElementById("getBtn")
+const repoName = document.getElementById("repoName");
+const desc = document.getElementById("desc")
 
 const loader = document.getElementById("load");
 const errorDiv = document.getElementById("error")
 const resultDiv = document.getElementById("result")
 
-getBtn.addEventListener("click", (e)=>{
-    if(user.value && token.value){
+pstBtn.addEventListener("click", (e)=>{
+    if(token.value && user.value){
         e.preventDefault();
         loader.style.display = "inline";
-        fetch("https://api.github.com/users/"+ user.value)
+        fetch("https://api.github.com/user/repos",
+            {
+                headers: {"authentication": token.value},
+                method: "POST",
+                body: JSON.stringify({
+                    name : reponName.value,
+                    decription: desc.value
+                })
+            }
+        )
         .then(res =>{
             res.json()
                 .then(data =>{

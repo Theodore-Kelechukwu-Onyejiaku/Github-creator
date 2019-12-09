@@ -6,7 +6,7 @@ input{
     padding:3%;
 }
 
-#getBtn{
+input[type="submit"]{
     background-color:rgb(50, 194, 238);
     color:white;
     border:none;
@@ -14,4 +14,8 @@ input{
     padding: 2%;
     border-radius:0.3em;
     cursor: pointer;
+}
+
+#load{
+    display:none;
 }

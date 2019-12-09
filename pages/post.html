@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
-    <title>Get Method</title>
+    <title>POST Method</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/get.css">
@@ -17,9 +17,10 @@
                 <form>
                         <input type="password" autofocus id="token"  placeholder="Your Token" required>
                         <p></p>
-                        <input type="text"  placeholder="User e.g facebook" id="user" required>
+                        <input type="text"  placeholder="Name of Repo" id="repoName" required>
+                        <input type="text"  placeholder="Description of repo" id="desc" required>
                         <p></p>
-                        <input id="getBtn" type="submit" value="Get">
+                        <input id="pstBtn" type="submit" value="Create Repo">
                 </form>
                 
             </div>
@@ -39,6 +40,6 @@
                 <div id="error"></div>
             </div>
     </div>   
-    <script src="../scripts/get.js"></script>
+    <script src="../scripts/post.js"></script>
 </body>
 </html>
