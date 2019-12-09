@@ -1,0 +1,78 @@
+body{
+    height:100%;
+}
+.container{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color:rgb(50, 194, 238);
+    overflow:hidden;
+    margin: 5% 0 0 0;
+}
+
+.container div{
+    width: 70%;
+}
+
+h1{
+    margin:0;
+    display:flex;
+    justify-content: center;
+}
+h1 button{
+    background-color:rgb(50, 194, 238);
+    padding: 5%;
+    border-radius:0.3em;
+    color:white;
+    border:none;
+    cursor:pointer;
+    width:70%;
+    margin-bottom: 5%;
+    outline-color: tomato;
+}
+
+.container .content{
+    border-top:none;
+    height: 100%;
+    width: 100%;
+    padding:3%;
+    overflow:hidden;
+    display:block;
+}
+
+div a{
+    color:red;
+}
+
+.bold{
+    font-weight:bolder;
+}
+
+#usage{
+    background-color:rgb(50, 194, 238);
+    color:white;
+    border:none;
+    font-size:200%;
+    border-radius:0.3em;
+    cursor: pointer;
+    outline-color: tomato;
+}
+#usageContent{
+    height:0px;
+    width:0px;
+    overflow:hidden;
+    border-bottom:3px solid black;
+    transition: 0.3s;
+    
+}
+
+
+/*  FOR LIST CONTAINER  */
+.info{
+   color: rgb(50, 194, 238);
+   width:100%;
+}
+
+ol li:hover{
+    background-color: grey;
+    color:white;
+}

@@ -1,0 +1,17 @@
+.container{
+    text-align: center;
+    color:rgb(50, 194, 238);
+}
+input{
+    padding:3%;
+}
+
+#getBtn{
+    background-color:rgb(50, 194, 238);
+    color:white;
+    border:none;
+    font-size:100%;
+    padding: 2%;
+    border-radius:0.3em;
+    cursor: pointer;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" media="screen and (max-width:500px)" href="css/small-screen.css">
+</head>
+<body>
+	<div class="info">
+		<button id="usage">&#x2630;</button>
+		<div id="usageContent">
+			Please note that to use this platform, you must have gotten your authentication key.
+			The instructions are listed below:
+			<ol class="list-con">
+				<li>Visit github>>settings>>developer</li>
+				<li>Click on personal access tokens</li>
+				<li>Click on generate a new token</li>
+				<li>After generating the new token, you will have to select the services or resources you
+					would want to get information about. Make sure to select users, gist, repo, etc. And in 
+					fact, select all if you want.
+				</li>
+				<li>When you are done selecting options, click on generate token.</li>
+				<li>Now copy and save the generated token because that it what we must use.</li>
+			</ol>
+		</div>
+	</div>
+	<div class="container">
+		<div>
+			<h1><button id="forGet">Get User &#x2630;</button></h1>
+			<div class="content" id="get">
+				Directly get user information on github here. The user may be you, your friend or companies like Google, Facebook, etc.			
+				<p>This is based on the <mark>GET</mark> method</p>
+				<hr>
+				<a href="pages/get.html">Do it here</a>
+			</div>
+		</div>
+		<div>
+			<h1><button id="forCreate">Create Repo &#x2630;</button></h1>
+			<div class="content" id="create">
+				You can create a repo directly here. You can provide information such as name of repo and the rest.
+				<p>This is based on the <mark>POST</mark> method</p>\
+				<hr>
+				<a href="#">Do it here</a>
+			</div>
+		</div>
+		<div>
+			<h1><button id="forUpdate">Update Repo &#x2630;</button></h1>
+			<div class="content" id="update">
+				A repo can be updated depending on the choice of the user. This is done by updating the name of the repo and other necessary changes.
+				<p>This is based on the <mark>PATCH</mark> method</p>
+				<hr>
+				<a href="#">Do it here</a>
+			</div>
+		</div>
+		<div >
+			<h1><button id="forDelete">Delete Repo &#x2630;</button></h1>
+			<div class="content" id="delete">
+				Deleting a repo is quite easy here. You just need to provide the name of the repo and that's all.
+				<p>This is based on the <mark>DELETE</mark> method</p>
+				<hr>
+				<a href="#">Do it here</a>
+			</div>
+		</div>
+	</div>
+	<script src="scripts/scripts.js"></script>
+</body>
+</html>
