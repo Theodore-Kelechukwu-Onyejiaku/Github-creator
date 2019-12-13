@@ -15,7 +15,7 @@
             </div>
             <div>
                 <form>
-                        <input type="password" autofocus id="token"  placeholder="Your Token" required>
+                        <input type="password"  id="token"  placeholder="Your Token" required>
                         <p></p>
                         <input type="text"  placeholder="Name of Repo" id="repoName" required>
                         <input type="text"  placeholder="Description of repo" id="desc" required>
@@ -34,10 +34,8 @@
             
             <!--    RESULT DIV RESULT DIV   -->
             <hr>
-            <div>
-                <img src="../images/loading.gif" title="ajax loader" alt="loading icon" id="load">
-                <div id="result"></div>
-                <div id="error"></div>
+            <div id="successDiv">
+                <p id="success">Sucessful! Visit your github page to see the new Repo</p>
             </div>
     </div>   
     <script src="../scripts/post.js"></script>

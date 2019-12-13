@@ -15,7 +15,7 @@
             </div>
             <div>
                 <form>
-                        <input type="password" autofocus id="token"  placeholder="Your Token" required>
+                        <input type="password" id="token"  placeholder="Your Token" required autosave="">
                         <p></p>
                         <input type="text"  placeholder="User e.g facebook" id="user" required>
                         <p></p>
@@ -28,17 +28,31 @@
                     &lt;&lt;Home
                 </a>
             </div>
-                
-                
-            
+                     
             <!--    RESULT DIV RESULT DIV   -->
-            <hr>
-            <div>
-                <img src="../images/loading.gif" title="ajax loader" alt="loading icon" id="load">
-                <div id="result"></div>
-                <div id="error"></div>
-            </div>
     </div>   
+    <div>
+        <center>
+            <img src="../images/loading.gif" title="ajax loader" alt="loading icon" id="load">
+        </center>
+        <div id="result"> 
+            <img id="image" height="100" width="100">  
+            <div class="grid-div">
+                <div>
+                    <div class="name"></div>
+                    <div class="biography"></div>
+                    <div class="repos"></div>
+                </div> 
+                <div>
+                     <div class="location"></div>
+                     <div class="url"></div>
+                     <div class="started"></div>
+                </div>
+           </div>
+        </div>
+
+        <div id="error"></div>
+    </div>
     <script src="../scripts/get.js"></script>
 </body>
 </html>

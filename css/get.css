@@ -19,3 +19,46 @@ input[type="submit"]{
 #load{
     display:none;
 }
+
+#result{
+    display:none;
+}
+
+.grid-div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.grid-div div div:hover{
+    background-color:rgb(50, 194, 238);
+    color:white;
+}
+
+#image{
+    display:none;
+}
+
+@media screen and (max-width: 500px){
+  .grid-div{
+    display: grid;
+    grid-template-columns: 1fr;
+    }  
+}
+
+.container div:last-child{
+    display:none;
+    margin: auto;
+    width:50%;
+    text-align:center;
+}
+
+div #success{
+    background-color: green;
+    padding:5%;
+}
+#success{
+    color:white;
+}
+
+
+
+

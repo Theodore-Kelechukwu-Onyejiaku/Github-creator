@@ -7,31 +7,30 @@ const errorDiv = document.getElementById("error")
 const resultDiv = document.getElementById("result")
 
 pstBtn.addEventListener("click", (e)=>{
-    if(token.value && user.value){
+    if(token.value && repoName.value && desc.value){
         e.preventDefault();
-        loader.style.display = "inline";
-        fetch("https://api.github.com/user/repos",
-            {
-                headers: {"authentication": token.value},
-                method: "POST",
+        fetch("https://api.github.com/user/repos",{   
+                method: "POST", // *GET, POST, PUT, DELETE, etc.
+                headers: {"Authorization": "token "+token.value},
                 body: JSON.stringify({
-                    name : reponName.value,
-                    decription: desc.value
-                })
+                        name: repoName.value,
+                        description: desc.value,
+                        homepage: "https://github.com",
+                        private: false,
+                        has_issues: true,
+                        has_projects: true,
+                        has_wiki: true
+                    }),    
             }
-        )
-        .then(res =>{
-            res.json()
-                .then(data =>{
-                    console.log(data);
-                    loader.style.display = "none";
-                })
+    )
+        .then(data =>{
+            data.json()
+            .then(data => {
+                document.getElementById("successDiv").style.display = "block";
+            })
         })
-        .catch(error =>{
-            console.error(error)
-            loader.style.display = "none";
-            errorDiv.style.color = "red";
-            errorDiv.innerText = "Please check your internet connection or try again"
+        .catch(error=>{
+            console.error(error);
         })
-    }                
+    }       
 })
