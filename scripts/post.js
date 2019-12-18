@@ -6,7 +6,15 @@ const loader = document.getElementById("load");
 const errorDiv = document.getElementById("error")
 const resultDiv = document.getElementById("result")
 
+const failDiv = document.getElementById("fail");
+const successDiv = document.getElementById("success");
+const unauthorizedDiv = document.getElementById("unauth");
+
 pstBtn.addEventListener("click", (e)=>{
+    failDiv.style.display = "none";
+    successDiv.style.display = "none";
+    unauthorizedDiv.style.display = "none";
+    loader.style.display = "inline";
     if(token.value && repoName.value && desc.value){
         e.preventDefault();
         fetch("https://api.github.com/user/repos",{   
@@ -20,16 +28,32 @@ pstBtn.addEventListener("click", (e)=>{
                         has_issues: true,
                         has_projects: true,
                         has_wiki: true
-                    }),    
+                    }),  
+                mode: "cors"  
             }
     )
         .then(data =>{
-            data.json()
-            .then(data => {
-                document.getElementById("successDiv").style.display = "block";
-            })
+            if(data.status !== 200){
+                loader.style.display = "none";
+                unauthorizedDiv.style.display = "block";
+                console.error("error")
+            }else{
+                console.log("success");
+                data.json()
+                .then(data => {
+                    loader.style.display = "none";
+                    successDiv.style.display = "block";            
+                })
+                .catch(error=>{
+                    console.error(error)
+                })
+            }
         })
         .catch(error=>{
+            loader.style.display = "none";
+            unauthorizedDiv.style.display = "none";
+            successDiv.style.display = "none";
+            failDiv.style.display = "block";
             console.error(error);
         })
     }       

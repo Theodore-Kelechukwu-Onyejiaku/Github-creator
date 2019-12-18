@@ -1,4 +1,3 @@
-const userToken = document.getElementById("token");
 const user = document.getElementById("user");
 const getBtn = document.getElementById("getBtn")
 
@@ -14,7 +13,7 @@ const firstTime =  document.querySelector(".started");
 const image = document.getElementById("image")
 
 getBtn.addEventListener("click", (e)=>{
-    if(user.value && token.value){
+    if(user.value){
         e.preventDefault();
         loader.style.display = "inline";
         fetch("https://api.github.com/users/"+ user.value)
@@ -37,7 +36,7 @@ getBtn.addEventListener("click", (e)=>{
         .catch(error =>{
             console.error(error)
             loader.style.display = "none";
-            errorDiv.style.color = "red";
+            errorDiv.style.display = "block"
             errorDiv.innerText = "Please check your internet connection or try again"
         })
     }                
