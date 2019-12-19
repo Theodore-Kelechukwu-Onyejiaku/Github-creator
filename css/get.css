@@ -2,17 +2,40 @@
 .container{
     text-align: center;
     color:rgb(50, 194, 238);
-    margin: 0 5%;
+    margin: 0  5%; 
 }
 .note{
     color:white;
     background-color: red;
     padding:1%;
-    margin-bottom: 3%;
+    margin-bottom: 5%;
+    box-shadow: 0 2px 2px 2px rgba(95, 92, 92, 0.582);
 }
 input{
     padding:3%;
 }
+
+h3{
+    text-align:center;
+    word-spacing:0px;
+    animation-name: my-anim;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: my-anim;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: infinite;
+}
+@keyframes my-anim{
+    0%{word-spacing: 0px}
+    50%{word-spacing: 50px}
+    90%{word-spacing: 30px}
+}
+@-webkit-keyframes my-anim{
+    0%{word-spacing: 0px}
+    50%{word-spacing: 50px}
+    90%{word-spacing: 30px}
+}
+
 
 input[type="submit"]{
     background-color:rgb(50, 194, 238);

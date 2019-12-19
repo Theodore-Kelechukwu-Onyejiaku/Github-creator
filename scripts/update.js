@@ -9,9 +9,9 @@ const resultDiv = document.getElementById("result")
 const failDiv = document.getElementById("fail");
 const successDiv = document.getElementById("success");
 const unauthorizedDiv = document.getElementById("unauth");
-const pstBtn = document.getElementById("pstBtn");
+const updBtn = document.getElementById("updBtn");
 
-pstBtn.addEventListener("click", (e)=>{
+updBtn.addEventListener("click", (e)=>{
     failDiv.style.display = "none";
     successDiv.style.display = "none";
     unauthorizedDiv.style.display = "none";
@@ -19,7 +19,7 @@ pstBtn.addEventListener("click", (e)=>{
     if(token.value && repoName.value && desc.value){
         e.preventDefault();
         fetch("https://api.github.com/user/repos",{   
-                method: "PUT", // *GET, POST, PUT, DELETE, etc.
+                method: "POST", // *GET, POST, PUT, DELETE, etc.
                 headers: {"Authorization": "token "+token.value},
                 body: JSON.stringify({
                         name: repoName.value,

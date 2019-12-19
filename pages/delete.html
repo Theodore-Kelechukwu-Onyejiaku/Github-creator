@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="eng">
 <head>
-    <title>UPDATE Method</title>
+    <title>DELETE Method</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../css/post.css">
@@ -10,7 +10,7 @@
     <div class="container">
             <div class="note">
                 <h3>Github Creator</h3><img src="../images/github.png" alt="github icon" title="github icon" height="50" width="50">
-                <br><p><srtong><span class="method">UPDATE</span></srtong><br>
+                <br><p><srtong><span class="method">DELETE</span></srtong><br>
                 <h4>Note that you are to provide your token and the user that<br>
                     you want to get info about. E.g you, Google, your friend, Github, Pinterest, etc.
                 </h4>
@@ -19,10 +19,9 @@
                 <form>
                         <input type="password"  id="token" autofocus  placeholder="Your Token" required>
                         <p></p>
-                        <input type="text"  placeholder="Name of Repo" autofocus id="repoName" required>
-                        <input type="text"  placeholder="Description of repo" autofocus id="desc" required>
+                        <input type="text"  placeholder="Name of Repo" id="repoName" required>
                         <p></p>
-                        <input id="updBtn" type="submit" value="Update Repo">
+                        <input id="delBtn" type="submit" value="Delete Repo">
                 </form>
                 
             </div>
@@ -40,15 +39,15 @@
                 <img src="../images/loading.gif" title="ajax loader" alt="loading icon" id="load">
             </center>
             <div id="successDiv">
-                <p id="success">Sucessful! Visit your github page to see the updated Repo</p>
+                <p id="success">Sucessful! Visit your github page and you won't see repo again.</p>
             </div>
             <div id="failDiv">
-                <p id="fail">Failed to Create. Please check internet connection or try again</p>
+                <p id="fail">Failed to Delete repo. Please check internet connection or try again</p>
             </div>
             <div id="unauthorised">
                 <p id="unauth">Unauthorized authentication token. Please get your authentication token or access token on github</p>
             </div>
     </div>   
-    <script src="../scripts/update.js"></script>
+    <script src="../scripts/delete.js"></script>
 </body>
 </html>

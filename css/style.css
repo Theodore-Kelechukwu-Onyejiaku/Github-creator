@@ -9,8 +9,19 @@ body{
     margin: 5% 0 0 0;
 }
 
-.container div{
+.container > div{
     width: 70%;
+    margin: 3%;
+    border: thin solid red;
+    box-shadow: 0 2px 2px 2px  rgba(95, 92, 92, 0.582);
+}
+.container > div > div{
+    padding:2%;
+    text-align:justify;
+    color:red;
+    box-sizing: border-box;
+    margin:0;
+    width:100%;
 }
 
 h1{
@@ -30,14 +41,7 @@ h1 button{
     outline-color: tomato;
 }
 
-.container .content{
-    border-top:none;
-    height: 100%;
-    width: 100%;
-    padding:3%;
-    overflow:hidden;
-    display:block;
-}
+
 
 div a{
     color:red;

@@ -1,6 +1,5 @@
 const token = document.getElementById("token");
 const repoName = document.getElementById("repoName");
-const desc = document.getElementById("desc")
 
 const loader = document.getElementById("load");
 const errorDiv = document.getElementById("error")
@@ -9,21 +8,20 @@ const resultDiv = document.getElementById("result")
 const failDiv = document.getElementById("fail");
 const successDiv = document.getElementById("success");
 const unauthorizedDiv = document.getElementById("unauth");
-const pstBtn = document.getElementById("pstBtn");
+const delBtn = document.getElementById("delBtn");
 
-pstBtn.addEventListener("click", (e)=>{
+delBtn.addEventListener("click", (e)=>{
     failDiv.style.display = "none";
     successDiv.style.display = "none";
     unauthorizedDiv.style.display = "none";
     loader.style.display = "inline";
-    if(token.value && repoName.value && desc.value){
+    if(token.value && repoName.value){
         e.preventDefault();
         fetch("https://api.github.com/user/repos",{   
-                method: "PUT", // *GET, POST, PUT, DELETE, etc.
+                method: "DELETE", // *GET, POST, PUT, DELETE, etc.
                 headers: {"Authorization": "token "+token.value},
                 body: JSON.stringify({
                         name: repoName.value,
-                        description: desc.value,
                         homepage: "https://github.com",
                         private: false,
                         has_issues: true,
